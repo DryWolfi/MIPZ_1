@@ -18,23 +18,23 @@ namespace MIPZ_1.Services
 
             while (true)
             {
-                int size;
-                int.TryParse(parse[0], out size);
+                int value;
+                int.TryParse(parse[0], out value);
                 if (parse.FirstOrDefault() == null
-                    || size == 0)
+                    || value == 0)
                 {
                     break;
                 }
 
                 var data = Data.Parse(parse
                     .Skip(1)
-                    .Take(size)
+                    .Take(value)
                     .ToArray());
 
                 dataSet.Datas.Add(data);
 
                 parse = parse
-                    .Skip(size + 1)
+                    .Skip(value + 1)
                     .ToArray();
             }
 
