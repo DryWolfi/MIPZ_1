@@ -46,10 +46,17 @@ namespace MIPZ_1.Models
         public static Country Parse(string parse)
         {
             var splited = parse?.Split(' ');
-            int.TryParse(splited[1], out var Xl);
-            int.TryParse(splited[2], out var Yl);
-            int.TryParse(splited[3], out var Xh);
-            int.TryParse(splited[4], out var Yh);
+
+            if (splited == null
+                || splited.Length != 5
+                || splited[0].Length > 25
+                || !int.TryParse(splited[1], out var Xl)
+                || !int.TryParse(splited[2], out var Yl)
+                || !int.TryParse(splited[3], out var Xh)
+                || !int.TryParse(splited[4], out var Yh))
+            {
+                throw new Exception();
+            }
 
             return new Country(splited[0], Xl, Yl, Xh, Yh);
         }
