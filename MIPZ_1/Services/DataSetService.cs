@@ -41,22 +41,6 @@ namespace MIPZ_1.Services
             return dataSet;
         }
 
-        public static DataSet InputFromConsole()
-        {
-            var dataSet = new DataSet();
-
-            Data data;
-
-            do
-            {
-                data = Data.InputFromConsole();
-
-                dataSet.Datas.Add(data);
-            } while (data != null);
-
-            return dataSet;
-        }
-
         public void Execute()
         {
             Results = Datas

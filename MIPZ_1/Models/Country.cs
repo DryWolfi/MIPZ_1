@@ -36,12 +36,6 @@ namespace MIPZ_1.Models
             Xh = xh;
             Yh = yh;
         }
-        public static Country InputFromConsole()
-        {
-            var input = Console.ReadLine();
-
-            return Parse(input);
-        }
 
         public static Country Parse(string parse)
         {

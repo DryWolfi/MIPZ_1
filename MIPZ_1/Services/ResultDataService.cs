@@ -10,14 +10,6 @@ namespace MIPZ_1.Services
     {
         public Dictionary<string, int> Results { get; init; } = new Dictionary<string, int>();
 
-        public void OutputToConsole()
-        {
-            foreach (var result in Results.OrderBy(r => r.Value).ThenBy(r => r.Key))
-            {
-                Console.WriteLine($"{result.Key} {result.Value}");
-            }
-        }
-
         public override string ToString()
         {
             var str = new StringBuilder();

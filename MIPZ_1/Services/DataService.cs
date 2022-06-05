@@ -26,30 +26,6 @@ namespace MIPZ_1.Services
 
         public List<Country> Countries { get; init; }
 
-        public static Data InputFromConsole()
-        {
-            var input = Console.ReadLine();
-
-            if (!int.TryParse(input, out var size))
-            {
-                throw new ArgumentException(nameof(size));
-            }
-
-            if (size <= 0)
-            {
-                return null;
-            }
-
-            var lines = new List<string>();
-
-            for (int i = 0; i < size; i++)
-            {
-                lines.Add(Console.ReadLine());
-            }
-
-            return Parse(lines.ToArray());
-        }
-
         public static Data Parse(IEnumerable<string> parse)
         {
             return new Data(parse.Select(p => Country.Parse(p)).ToList());
