@@ -1,0 +1,12 @@
+File,LOC,SLOC-P,SLOC-L,MVG,BLOC,C&SLOC,CLOC,CWORD,HCLOC,HCWORD
+C:\Users\dvovc\source\repos\MIPZ_1\MIPZ_1\Program.cs,21,17,11,0,4,0,0,0,0,0
+C:\Users\dvovc\source\repos\MIPZ_1\MIPZ_1\Models\City.cs,57,47,29,4,10,0,0,0,0,0
+C:\Users\dvovc\source\repos\MIPZ_1\MIPZ_1\Models\Country.cs,59,51,27,11,8,0,0,0,0,0
+C:\Users\dvovc\source\repos\MIPZ_1\MIPZ_1\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs,5,3,2,0,1,0,1,2,1,2
+C:\Users\dvovc\source\repos\MIPZ_1\MIPZ_1\obj\Debug\net5.0\MIPZ_1.AssemblyInfo.cs,24,9,2,0,5,0,10,31,9,27
+C:\Users\dvovc\source\repos\MIPZ_1\MIPZ_1\obj\Release\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs,5,3,2,0,1,0,1,2,1,2
+C:\Users\dvovc\source\repos\MIPZ_1\MIPZ_1\obj\Release\net5.0\MIPZ_1.AssemblyInfo.cs,24,9,2,0,5,0,10,31,9,27
+C:\Users\dvovc\source\repos\MIPZ_1\MIPZ_1\Services\CoinService.cs,24,22,12,1,2,0,0,0,0,0
+C:\Users\dvovc\source\repos\MIPZ_1\MIPZ_1\Services\DataService.cs,86,72,37,10,14,0,0,0,0,0
+C:\Users\dvovc\source\repos\MIPZ_1\MIPZ_1\Services\DataSetService.cs,66,52,29,7,14,0,0,0,0,0
+C:\Users\dvovc\source\repos\MIPZ_1\MIPZ_1\Services\ResultDataService.cs,26,21,14,2,5,0,0,0,0,0

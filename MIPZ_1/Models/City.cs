@@ -3,9 +3,10 @@ using System.Collections.Generic;
 
 namespace MIPZ_1.Models
 {
+    
     public class City
     {
-        private readonly Dictionary<string, int> _dict = new Dictionary<string, int>();
+        private  readonly Dictionary<string, int> _dict = new Dictionary<string, int>(); 
         public string Country { get; }
         public int X { get; }
         public int Y { get; }
