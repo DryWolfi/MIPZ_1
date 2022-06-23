@@ -3,9 +3,11 @@ using System.Collections.Generic;
 
 namespace MIPZ_1.Models
 {
-    
     public class City
     {
+        public const int StartCoins = 1000000;
+        public const int ThousandC = 1000;
+
         private  readonly Dictionary<string, int> _dict = new Dictionary<string, int>(); 
         public string Country { get; }
         public int X { get; }
@@ -19,8 +21,14 @@ namespace MIPZ_1.Models
             Y = y;
 
             Coins = new Dictionary<string, int>{
-                { country, 1000000 }
+                { country, StartCoins }
             };
+        }
+        public bool CheckIfMono()
+        {
+            if (Coins.Count == 1)
+                return true;
+            return false;
         }
         public void AddIncoming(Dictionary<string, int> incoming)
         {
@@ -36,7 +44,7 @@ namespace MIPZ_1.Models
 
             foreach (var pair in Coins)
             {
-                dict.Add(pair.Key, pair.Value / 1000);
+                dict.Add(pair.Key, pair.Value / ThousandC);
 
                 _dict.AddCoins(pair.Key, -dict[pair.Key]);
             }

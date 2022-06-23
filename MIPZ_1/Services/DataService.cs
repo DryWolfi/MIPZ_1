@@ -9,6 +9,7 @@ namespace MIPZ_1.Services
 {
     public class Data
     {
+        public const int ThousandD = 1000;
         private readonly Dictionary<(int x, int y), City> _cities;
 
         public Data(List<Country> countries)
@@ -47,6 +48,12 @@ namespace MIPZ_1.Services
                     break;
                 }
 
+                if (CheckCountriesMono() && days == ThousandD)
+                {
+                    Console.WriteLine("Looks like we have a disconected Country");
+                    break;
+                }
+
                 foreach (var ((x, y), city) in _cities)
                 {
                     SendMoney(x, y + 1, city);
@@ -66,7 +73,22 @@ namespace MIPZ_1.Services
                 Results = results
             };
         }
-
+        private bool CheckCountriesMono()
+        {
+            for (int i = 0; i < Countries.Count; i++)
+            {
+                int citiesCount = Countries[i].Cities.Count;
+                int monoCities = 0;
+                foreach (var city in Countries[i].Cities)
+                {
+                    if (city.CheckIfMono())
+                        monoCities++;
+                }
+                if (citiesCount == monoCities)
+                    return true;
+            }
+            return false;
+        }
         private IEnumerable<string> CompletedCountries() =>
             _cities
                 .GroupBy(x => x.Value.Country)

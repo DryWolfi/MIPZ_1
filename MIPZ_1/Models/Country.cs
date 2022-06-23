@@ -5,7 +5,7 @@ namespace MIPZ_1.Models
 {
     public class Country
     {
-
+        public const int MaxValue = 10;
         public string Name { get; }
         public int Xl { get; }
         public int Yl { get; }
@@ -36,37 +36,37 @@ namespace MIPZ_1.Models
                 if (name == null)
                 {
                     Console.WriteLine("Name is null");
-                    throw new ArgumentNullException(nameof(name));
+                    throw new ArgumentNullException();
                 }
 
                 if (name.Length > 25)
                 {
                     Console.WriteLine("Name is to long");
-                    throw new ArgumentException(nameof(name));
+                    throw new ArgumentException();
                 }
 
-                if (xl < 0 || xl > 10)
+                if (xl < 0 || xl > MaxValue)
                 {
                     Console.WriteLine("xl is less than 0");
-                    throw new ArgumentOutOfRangeException(nameof(xl));
+                    throw new ArgumentOutOfRangeException();
                 }
 
-                if (xh < xl || xh > 10)
+                if (xh < xl || xh > MaxValue)
                 {
                     Console.WriteLine("xl is less than xh");
-                    throw new ArgumentOutOfRangeException(nameof(xh));
+                    throw new ArgumentOutOfRangeException();
                 }
 
-                if (yl < 0 || yl > 10)
+                if (yl < 0 || yl > MaxValue)
                 {
                     Console.WriteLine("yl is less than 0");
-                    throw new ArgumentOutOfRangeException(nameof(yl));
+                    throw new ArgumentOutOfRangeException();
                 }
 
-                if (yh < yl || yh > 10)
+                if (yh < yl || yh > MaxValue)
                 {
                     Console.WriteLine("yh is less than yl");
-                    throw new ArgumentOutOfRangeException(nameof(yh));
+                    throw new ArgumentOutOfRangeException();
                 }
                 Name = name;
                 Xl = xl;
